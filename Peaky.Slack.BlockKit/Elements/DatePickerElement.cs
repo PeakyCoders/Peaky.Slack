@@ -25,20 +25,20 @@ namespace Peaky.Slack.BlockKit.Elements
         /// A plain_text only text object that defines the placeholder text shown on the datepicker.
         /// Maximum length for the text in this field is 150 characters.
         /// </summary>
-        [JsonProperty("placeholder")]
+        [JsonProperty("placeholder", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public PlainTextComposition Placeholder;
 
         /// <summary>
         /// The initial date that is selected when the element is loaded.
         /// This should be in the format YYYY-MM-DD.
         /// </summary>
-        [JsonProperty("initial_date")]
+        [JsonProperty("initial_date", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string InitialDate;
 
         /// <summary>
         /// A confirm object that defines an optional confirmation dialog that appears after a date is selected.
         /// </summary>
-        [JsonProperty("confirm")]
+        [JsonProperty("confirm", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ConfirmationDialogComposition Confirm;
     }
 }

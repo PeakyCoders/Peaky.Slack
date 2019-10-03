@@ -26,7 +26,7 @@ namespace Peaky.Slack.BlockKit.Composition
         /// If you're using url, you'll still receive an interaction payload
         /// and will need to send an acknowledgement response.
         /// </summary>
-        [JsonProperty("url")]
+        [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Url;
     }
 }

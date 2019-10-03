@@ -18,7 +18,7 @@ namespace Peaky.Slack.BlockKit.Elements
         /// Maximum length for the text in this field is 75 characters.
         /// </summary>
         [JsonProperty("text")]
-        public TextComposition Text;
+        public PlainTextComposition Text;
 
         /// <summary>
         /// An identifier for this action.
@@ -35,14 +35,14 @@ namespace Peaky.Slack.BlockKit.Elements
         /// If you're using url, you'll still receive an interaction payload
         /// and will need to send an acknowledgement response.
         /// </summary>
-        [JsonProperty("url")]
+        [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Url;
 
         /// <summary>
         /// The value to send along with the interaction payload.
         /// Maximum length for this field is 2000 characters.
         /// </summary>
-        [JsonProperty("value")]
+        [JsonProperty("value", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Value;
 
         /// <summary>
@@ -56,13 +56,13 @@ namespace Peaky.Slack.BlockKit.Elements
         ///
         /// If you don't include this field, the default button style will be used.
         /// </summary>
-        [JsonProperty("style")]
+        [JsonProperty("style", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Style;
 
         /// <summary>
         /// A confirm object that defines an optional confirmation dialog after the button is clicked.
         /// </summary>
-        [JsonProperty("confirm")]
+        [JsonProperty("confirm", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ConfirmationDialogComposition Confirm;
     }
 }

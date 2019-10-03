@@ -1,6 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using Peaky.Slack.BlockKit.Enums;
 
 namespace Peaky.Slack.BlockKit.Composition
 {
@@ -10,7 +8,13 @@ namespace Peaky.Slack.BlockKit.Composition
         /// The formatting to use for this text object. Forced to plain_text.
         /// </summary>
         [JsonProperty("type")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public override TextType Type => TextType.PlainText;
+        public override string Type => "plain_text";
+        
+        /// <summary>
+        /// Indicates whether emojis in a text field should be escaped into the colon emoji format.
+        /// This field is only usable when type is plain_text.
+        /// </summary>
+        [JsonProperty("emoji", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool Emoji;
     }
 }

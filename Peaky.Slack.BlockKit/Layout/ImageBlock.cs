@@ -30,15 +30,15 @@ namespace Peaky.Slack.BlockKit.Layout
         /// An optional title for the image in the form of a text object that can only be of type: plain_text.
         /// Maximum length for the text in this field is 2000 characters.
         /// </summary>
-        [JsonProperty("title")]
-        public TextComposition Title;
+        [JsonProperty("title", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public PlainTextComposition Title;
         
         /// <summary>
         /// A string acting as a unique identifier for a block. You can use this block_id when you receive an
         /// interaction payload to identify the source of the action. If not specified, one will be generated.
         /// Maximum length for this field is 255 characters.
         /// </summary>
-        [JsonProperty("block_id")]
+        [JsonProperty("block_id", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string BlockId;
     }
 }

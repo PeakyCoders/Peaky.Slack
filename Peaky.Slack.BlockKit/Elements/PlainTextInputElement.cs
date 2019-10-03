@@ -25,20 +25,20 @@ namespace Peaky.Slack.BlockKit.Elements
         /// A plain_text only text object that defines the placeholder text shown in the plain-text input.
         /// Maximum length for the text in this field is 150 characters.
         /// </summary>
-        [JsonProperty("placeholder")]
+        [JsonProperty("placeholder", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public PlainTextComposition Placeholder;
 
         /// <summary>
         /// The initial value in the plain-text input when it is loaded.
         /// </summary>
-        [JsonProperty("initial_value")]
+        [JsonProperty("initial_value", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string InitialValue;
 
         /// <summary>
         /// Indicates whether the input will be a single line (false) or a larger textarea (true).
         /// Defaults to false.
         /// </summary>
-        [JsonProperty("multiline")]
+        [JsonProperty("multiline", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool Multiline;
 
         /// <summary>
@@ -46,14 +46,14 @@ namespace Peaky.Slack.BlockKit.Elements
         /// If the user provides less, they will receive an error.
         /// Maximum value is 3000.
         /// </summary>
-        [JsonProperty("min_length")]
+        [JsonProperty("min_length", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public int MinLength;
 
         /// <summary>
         /// The maximum length of input that the user can provide.
         /// If the user provides more, they will receive an error.
         /// </summary>
-        [JsonProperty("max_length")]
-        public int MaxLength;
+        [JsonProperty("max_length", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public int MaxLength = int.MaxValue;
     }
 }

@@ -16,7 +16,7 @@ namespace Peaky.Slack.BlockKit.Layout
         /// interaction payload to identify the source of the action. If not specified, one will be generated.
         /// Maximum length for this field is 255 characters.
         /// </summary>
-        [JsonProperty("block_id")]
+        [JsonProperty("block_id", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string BlockId;
     }
 }

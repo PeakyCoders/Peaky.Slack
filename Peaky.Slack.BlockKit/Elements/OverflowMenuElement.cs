@@ -32,7 +32,7 @@ namespace Peaky.Slack.BlockKit.Elements
         /// <summary>
         /// A confirm object that defines an optional confirmation dialog that appears after a menu item is selected.
         /// </summary>
-        [JsonProperty("confirm")]
+        [JsonProperty("confirm", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ConfirmationDialogComposition Confirm;
     }
 }

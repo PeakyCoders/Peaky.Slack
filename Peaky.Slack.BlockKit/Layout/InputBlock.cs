@@ -30,14 +30,14 @@ namespace Peaky.Slack.BlockKit.Layout
         /// It must be a a text object with a type of plain_text.
         /// Maximum length for the text in this field is 2000 characters.
         /// </summary>
-        [JsonProperty("hint")]
+        [JsonProperty("hint", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public TextComposition Hint;
 
         /// <summary>
         /// A boolean that indicates whether the input element may be empty when a user submits the modal.
         /// Defaults to false.
         /// </summary>
-        [JsonProperty("optional")]
+        [JsonProperty("optional", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool Optional;
     }
 }
