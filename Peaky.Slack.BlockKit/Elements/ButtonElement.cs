@@ -9,7 +9,7 @@ namespace Peaky.Slack.BlockKit.Elements
         /// <summary>
         /// The type of element. In this case type is always button.
         /// </summary>
-        [JsonProperty("button")]
+        [JsonProperty("type")]
         public string Type => "button";
 
         /// <summary>
