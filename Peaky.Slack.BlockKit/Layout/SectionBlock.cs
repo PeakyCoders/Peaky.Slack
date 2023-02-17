@@ -12,12 +12,12 @@ namespace Peaky.Slack.BlockKit.Layout
         /// </summary>
         [JsonProperty("type")]
         public string Type => "section";
-        
+
         /// <summary>
         /// The text for the block, in the form of a text object.
         /// Maximum length for the text in this field is 3000 characters.
         /// </summary>
-        [JsonProperty("text")]
+        [JsonProperty("text", NullValueHandling = NullValueHandling.Ignore)]
         public TextComposition Text;
 
         /// <summary>
